@@ -1,66 +1,769 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DIVINE Constructions</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Divine Construction | Engineering Excellence</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1e3a8a",
+              accent: "#EEC144",
+              "background-light": "#ffffff",
+              "background-dark": "#0f172a",
+              charcoal: "#000000",
+            },
+            fontFamily: {
+              display: ["Montserrat", "sans-serif"],
+              sans: ["Open Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "16px",
+              lg: "16px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #000000;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-display {
+        font-family: "Montserrat", sans-serif;
+      }
+      .card-radius {
+        border-radius: 16px;
+      }
+    </style>
+  </head>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-content">
-      <img src="logo.png" alt="Divine Constructions Logo" class="logo" />
-      <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Building with Integrity & Excellence</h1>
-      <p>Smart planning. Strong execution. Reliable construction solutions.</p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="services" id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-grid">
-        <div class="service-card">Residential & Commercial Construction</div>
-        <div class="service-card">Turnkey Projects</div>
-        <div class="service-card">Compound Wall Works</div>
-        <div class="service-card">Renovation & Remodeling</div>
-        <div class="service-card">Interior Work</div>
-        <div class="service-card">Exterior Work</div>
+  <body class="bg-white text-black transition-colors duration-300">
+    <header
+      class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-2">
+          <img
+            src="Logo.png"
+            alt="Divine Construction Logo"
+            class="h-10 w-auto object-contain"
+          />
+        </div>
+        <nav
+          class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider text-black"
+        >
+          <a class="hover:text-primary transition-colors" href="#about"
+            >About</a
+          >
+          <a class="hover:text-primary transition-colors" href="#services"
+            >Services</a
+          >
+          <a class="hover:text-primary transition-colors" href="#projects"
+            >Projects</a
+          >
+          <a class="hover:text-primary transition-colors" href="#contact"
+            >Contact</a
+          >
+        </nav>
       </div>
-    </div>
-  </section>
+    </header>
+    <main>
+      <!-- Figma Hero Section -->
+      <section class="max-w-7xl mx-auto px-6 py-16 md:py-24" id="hero-grid">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Text Column -->
+          <div
+            class="lg:col-span-5 flex flex-col justify-center hero-left-content"
+          >
+            <h1
+              class="text-5xl lg:text-6xl font-display font-semibold leading-tight mb-4 text-[#1a1a1a]"
+            >
+              Designing<br />Tomorrow, Today
+            </h1>
+            <p class="text-gray-500 mb-8 max-w-sm text-sm">
+              Blending Creativity, Functionality, and Sustainability to
+              Transform Your Ideas into Architectural Masterpieces that Stand
+              Out.
+            </p>
 
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2>Why Divine?</h2>
-      <p>
-        We deliver high-quality construction with transparent processes,
-        durable materials, and timely execution. Our focus is on long-term
-        value and client satisfaction.
-      </p>
-    </div>
-  </section>
+            <div class="flex items-center gap-4 mb-20">
+              <a
+                href="#contact"
+                class="bg-primary text-white px-10 py-2.5 rounded-full font-medium hover:opacity-90 transition-all shadow-md"
+              >
+                Consult
+              </a>
+              <a
+                href="#projects"
+                class="border border-gray-300 text-[#1a1a1a] px-8 py-3 rounded-full text-sm font-medium hover:border-gray-500 transition-colors"
+              >
+                Explore
+              </a>
+            </div>
+          </div>
 
-  <!-- Footer -->
-  <footer class="footer" id="contact">
-    <div class="container">
-      <p>© 2026 DIVINE Constructions. All rights reserved.</p>
-    </div>
-  </footer>
+          <!-- Right Image Column -->
+          <div
+            class="lg:col-span-7 relative h-[600px] lg:h-[700px] hero-right-content"
+          >
+            <img
+              src="hero_patio.png"
+              alt="Modern Architecture Patio"
+              class="absolute top-0 right-0 w-4/5 h-4/5 object-cover object-center shadow-2xl z-0"
+            />
+            <img
+              src="hero_interior.png"
+              alt="Modern Architecture Interior"
+              class="absolute bottom-0 left-0 w-2/5 h-3/5 object-cover object-center shadow-xl z-20"
+            />
 
-</body>
+            <!-- Circular Arrow Button -->
+            <div
+              class="absolute top-1/2 left-[15%] -translate-y-1/2 -translate-x-1/2 w-24 h-24 rounded-full border border-gray-400 bg-white/50 backdrop-blur-sm flex items-center justify-center z-30 hover:bg-white hover:scale-105 transition-all cursor-pointer shadow-sm"
+            >
+              <span
+                class="material-symbols-outlined text-3xl font-light text-[#1a1a1a]"
+                >arrow_forward</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Spacer for About section -->
+      <div class="pt-24"></div>
+
+      <section class="max-w-7xl mx-auto px-6 mb-32" id="about">
+        <div class="bg-gray-50 p-8 md:p-16 card-radius border border-gray-100">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="lg:pr-8">
+              <span
+                class="font-display font-bold tracking-[0.2em] uppercase text-xs mb-5 block text-[#243c7b]"
+                >Er. Nishanth D</span
+              >
+              <h2
+                class="text-3xl md:text-5xl font-display font-semibold mb-12 text-[#1f2937]"
+              >
+                Experience Meets Independence
+              </h2>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-[#243c7b] mt-1 text-2xl"
+                    >hardware</span
+                  >
+                  <p class="text-[#4b5563] text-lg leading-relaxed">
+                    <strong class="text-[#1f2937] font-semibold"
+                      >6+ years</strong
+                    >
+                    of hands-on experience in residential and commercial
+                    construction
+                  </p>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-[#243c7b] mt-1 text-2xl"
+                    >work</span
+                  >
+                  <p class="text-[#4b5563] text-lg leading-relaxed">
+                    Former Site Engineer at Royal Land & Developers
+                  </p>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-[#243c7b] mt-1 text-2xl"
+                    >event_upcoming</span
+                  >
+                  <p class="text-[#4b5563] text-lg leading-relaxed">
+                    Established independent practice in May 2025
+                  </p>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-[#243c7b] mt-1 text-2xl"
+                    >verified</span
+                  >
+                  <p class="text-[#4b5563] text-lg leading-relaxed">
+                    Specialized in structural quality, site execution, and
+                    project supervision
+                  </p>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-[#243c7b] mt-1 text-2xl"
+                    >task_alt</span
+                  >
+                  <p class="text-[#4b5563] text-lg leading-relaxed">
+                    Personally involved from planning to completion
+                  </p>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span
+                    class="material-symbols-outlined text-[#243c7b] mt-1 text-2xl"
+                    >person</span
+                  >
+                  <p class="text-[#4b5563] text-lg leading-relaxed">
+                    <strong class="text-[#1f2937] font-semibold"
+                      >Personalized</strong
+                    >
+                    client experience
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Animated Mansion GIF Container -->
+            <div
+              class="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-white group"
+            >
+              <img
+                src="The_camera_angle_should_move_from_the_top_to.gif"
+                alt="3D Animated Mansion Construction"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-x-0 bottom-4 text-center z-10 pointer-events-none"
+              >
+                <span
+                  class="bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase text-primary shadow-sm inline-block"
+                >
+                  Architectural Visualization
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-6 mb-32" id="services">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4 uppercase tracking-wide">
+            Our Professional Services
+          </h2>
+          <div class="w-20 h-1 bg-[#EEC144] mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="p-8 bg-white card-radius border border-gray-100 hover:shadow-xl transition-shadow group"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 text-primary card-radius flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl">home</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Full-Scale Construction</h3>
+            <p class="text-gray-600">
+              End-to-end residential and commercial building solutions from
+              excavation to final paint.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-white card-radius border border-gray-100 hover:shadow-xl transition-shadow group"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 text-primary card-radius flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl">key</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Turnkey Solutions</h3>
+            <p class="text-gray-600">
+              Complete project management where we take care of everything while
+              you enjoy the progress.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-white card-radius border border-gray-100 hover:shadow-xl transition-shadow group"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 text-primary card-radius flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl">fence</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Specialized Civil Works</h3>
+            <p class="text-gray-600">
+              Expert construction of compound walls and other essential
+              structural civil components.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-white card-radius border border-gray-100 hover:shadow-xl transition-shadow group"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 text-primary card-radius flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >construction</span
+              >
+            </div>
+            <h3 class="text-xl font-bold mb-3">Renovation &amp; Remodeling</h3>
+            <p class="text-gray-600">
+              Modernizing and strengthening existing structures to meet
+              contemporary standards.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-white card-radius border border-gray-100 hover:shadow-xl transition-shadow group"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 text-primary card-radius flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >format_paint</span
+              >
+            </div>
+            <h3 class="text-xl font-bold mb-3">Interiors &amp; Exteriors</h3>
+            <p class="text-gray-600">
+              Comprehensive design and execution for aesthetically pleasing
+              living and working spaces.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-white card-radius border border-gray-100 hover:shadow-xl transition-shadow group"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 text-primary card-radius flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >water_damage</span
+              >
+            </div>
+            <h3 class="text-xl font-bold mb-3">Technical Oversight</h3>
+            <p class="text-gray-600">
+              Specialized waterproofing and structural integrity checks for
+              long-term durability.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-gray-100 text-center"
+        >
+          <div>
+            <p class="text-4xl font-bold text-[#EEC144] mb-2">50+</p>
+            <p
+              class="text-gray-500 uppercase tracking-widest text-xs font-bold"
+            >
+              Projects Completed
+            </p>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-primary mb-2">45+</p>
+            <p
+              class="text-gray-500 uppercase tracking-widest text-xs font-bold"
+            >
+              Satisfied Clients
+            </p>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-primary mb-2">10+</p>
+            <p
+              class="text-gray-500 uppercase tracking-widest text-xs font-bold"
+            >
+              Current Projects
+            </p>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-[#EEC144] mb-2">12+</p>
+            <p
+              class="text-gray-500 uppercase tracking-widest text-xs font-bold"
+            >
+              Years Combined Exp
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-[#f8f9fa] border-y border-gray-100 py-24 mb-32"
+        id="projects"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="mb-16 text-center">
+            <h2 class="text-3xl font-bold mb-4 uppercase tracking-wide">
+              Recent Projects
+            </h2>
+            <div class="w-20 h-1 bg-[#EEC144] mx-auto rounded-full"></div>
+          </div>
+          <div class="mb-24">
+            <h3
+              class="text-2xl font-bold mb-10 text-primary flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined">business</span> Commercial
+              &amp; Healthcare
+            </h3>
+            <div class="space-y-16">
+              <div
+                class="flex flex-col md:flex-row items-center gap-8 md:gap-16"
+              >
+                <div
+                  class="w-full md:w-1/2 overflow-hidden card-radius shadow-lg aspect-video bg-gray-100"
+                >
+                  <img
+                    alt="Commercial complex rendering"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2j19_m4NKIRkbe4dEjzzUFUPymDI9wfmS5ye5amsqSSbq6JjIK_c1bB-LpYOiQJFcl98vItNlqGck6gAoaG8-Kwz8P-9iJHEg-FgG8YkZDuyRKmpO4ZO0tKX2vGSmyNM8YupdPK07AoIH0bHQg8FJ10w6fiCCiHoP2n0U9PnOQe9gKB0pVMYeB6PJeeyYLca0OMCLdefEXbNBv0aOXCDd1ZoutBqk4ziEoaTqjT9zGerxhVppmvyUm7WovOlewTApPuqVX4nXHiOC"
+                  />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <span
+                    class="text-primary font-bold uppercase text-xs tracking-widest mb-2 block"
+                    >Tindivanam</span
+                  >
+                  <h4 class="text-2xl font-bold mb-4">
+                    Commercial Complex in Tindivanam
+                  </h4>
+                  <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                    A high-spec commercial hub designed for maximum utility and
+                    architectural prominence in the heart of Tindivanam.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16"
+              >
+                <div
+                  class="w-full md:w-1/2 overflow-hidden card-radius shadow-lg aspect-video bg-gray-100"
+                >
+                  <img
+                    alt="Healthcare facility"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBehPv1xn6e2NtQ0jxOBi8uGcV0SI-o5QtjBWjXAf4qrH0Ah8wuIeNRo1HwtU06zIO3xK9rLzkCFZQAPgLCAnSVOQE1axvlk4TlZLPv-imEVywawGmadNi87ek5k03Q5y5nfyjT8YFJ0bhcqYvpVij046mSOic-AszwwzVYw8S7Qzs2P6Ho0CxzCaCSFAOIxfqri64Xr5q5E0XQBokbQ8HzPLWIHTQMWjBQhWmqP9eS5LByqwnxrb1-JfdNxtmw4bVf599sJhelEj0"
+                  />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <span
+                    class="text-primary font-bold uppercase text-xs tracking-widest mb-2 block"
+                    >Chengalpattu</span
+                  >
+                  <h4 class="text-2xl font-bold mb-4">
+                    Hospital in Chengalpattu
+                  </h4>
+                  <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                    Specialized healthcare infrastructure focusing on structural
+                    safety, hygiene-standard finishes, and efficient
+                    patient-flow design.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              class="text-2xl font-bold mb-10 text-primary flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined">account_balance</span>
+              Current &amp; Government Works
+            </h3>
+            <div class="space-y-16">
+              <div
+                class="flex flex-col md:flex-row items-center gap-8 md:gap-16"
+              >
+                <div
+                  class="w-full md:w-1/2 overflow-hidden card-radius shadow-lg aspect-video bg-gray-100"
+                >
+                  <img
+                    alt="Swimming pool construction"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuABS7Vr6gRXE2s4t-pkZLsRrpQDqrrlc2OtqPKCw_7zNiMa53ngqb_Lvnf-uLMP1ujnXKVxp0sPsOe_dI5i7TK9CQflhDHtNqjZUNZxSWTNldX6koJFNK6ftcY2z1XFAVkjD2WIpSjE-wotgQkdCf22653XbVcMJhSr2QiRIMzL1-P7s3U1a_X56erGAGqr9bM6ZS_jQMeRRRewkagkOWmAW_aRpECtd80fus0v2t7en6LciI5QLysLFvrHgA980d5745nGv9Q2W_4N"
+                  />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <span
+                    class="text-primary font-bold uppercase text-xs tracking-widest mb-2 block"
+                    >New Project</span
+                  >
+                  <h4 class="text-2xl font-bold mb-4">Govt. Swimming Pool</h4>
+                  <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                    Executing high-standard government leisure infrastructure
+                    with precision engineering and advanced filtration housing.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16"
+              >
+                <div
+                  class="w-full md:w-1/2 overflow-hidden card-radius shadow-lg aspect-video bg-gray-100"
+                >
+                  <img
+                    alt="Pool renovation"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0R21GOrHnVZAycshNaVjWr3om_YmDSYRcRHeIlnvqT7KS_Ut9f83JTfn8am_x43oZOjfAxdoS9G4DIQGqpsOqOAwsZ3yPH-Sw4kTu7Nt30con-6jOTJIgaGsIYK1ncNW9_QzZmk-h1qpptx1-q1riSgHpSd2vaNzwMNX5x2D0OeMgvHekhVGh91Bg_3H_yRAdUDWcEIF4NTwmuunYZd30_srm2MYme882HN5DhiOPER_f0lqEJ3P6emxSlkGfvFc52yNVw4WjSUaz"
+                  />
+                </div>
+                <div class="w-full md:w-1/2">
+                  <span
+                    class="text-primary font-bold uppercase text-xs tracking-widest mb-2 block"
+                    >Renovation</span
+                  >
+                  <h4 class="text-2xl font-bold mb-4">
+                    Swimming Pool Renovation
+                  </h4>
+                  <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                    Upgrading existing community aquatic facilities with modern
+                    tiling, leak-proof sealing, and improved safety features.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="w-full py-40 mb-32 bg-white flex items-center justify-center border-b border-gray-100">
+            <div class="text-center">
+                <div
+                    class="w-24 h-24 border-4 border-primary/20 rounded-lg mx-auto flex items-center justify-center mb-8">
+                    <span class="material-symbols-outlined text-primary text-5xl">architecture</span>
+                </div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-display">Engineering Excellence at Scale</h2>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto px-6">Providing substantial capacity and high-quality
+                    construction expertise for complex infrastructure projects across the region.</p>
+            </div>
+        </section> -->
+      <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div
+          class="bg-primary p-12 md:p-20 card-radius text-center text-white relative overflow-hidden shadow-2xl"
+        >
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"
+          ></div>
+          <h2 class="text-3xl md:text-5xl font-bold mb-6 font-display">
+            Let’s Build Something Divine.
+          </h2>
+          <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+            Contact Er. Nishanth D today for expert consultation and quality
+            construction for your next project.
+          </p>
+          <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a
+              class="bg-white text-primary px-8 py-4 card-radius font-bold hover:bg-blue-50 transition-colors flex items-center justify-center space-x-2"
+              href="tel:+916382119638"
+            >
+              <span class="material-symbols-outlined">call</span>
+              <span>+91 63821 19638</span>
+            </a>
+            <a
+              class="bg-primary border-2 border-white/30 text-white px-8 py-4 card-radius font-bold hover:bg-white/10 transition-colors flex items-center justify-center space-x-2"
+              href="mailto:divineconstruction@gmail.com"
+            >
+              <span class="material-symbols-outlined">email</span>
+              <span>divineconstruction@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-50 border-t border-gray-100 pt-16 pb-8" id="contact">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-2 mb-6">
+              <img
+                src="Logo.png"
+                alt="Divine Construction Logo"
+                class="h-8 w-auto object-contain grayscale opacity-80"
+              />
+            </div>
+            <p class="text-gray-500 max-w-sm mb-6">
+              Under the expert leadership of Er. Nishanth D, we deliver
+              engineering excellence for residential, commercial, and government
+              projects.
+            </p>
+            <p class="font-bold text-primary">Er. Nishanth D</p>
+          </div>
+          <div>
+            <h4
+              class="font-display font-bold mb-6 uppercase tracking-wider text-sm"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-4 text-gray-500">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#about"
+                  >About Our Firm</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#services"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#projects"
+                  >Recent Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="http://www.divineconstruction.ltd"
+                  >www.divineconstruction.ltd</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-display font-bold mb-6 uppercase tracking-wider text-sm"
+            >
+              Contact Info
+            </h4>
+            <ul class="space-y-4 text-gray-500">
+              <li class="flex items-center space-x-3">
+                <span class="material-symbols-outlined text-primary text-sm"
+                  >phone</span
+                >
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="tel:+916382119638"
+                  >+91 63821 19638</a
+                >
+              </li>
+              <li class="flex items-center space-x-3">
+                <span class="material-symbols-outlined text-primary text-sm"
+                  >email</span
+                >
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="mailto:divineconstruction@gmail.com"
+                  >divineconstruction@gmail.com</a
+                >
+              </li>
+              <li class="flex items-center space-x-3">
+                <span class="material-symbols-outlined text-primary text-sm"
+                  >language</span
+                >
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="http://www.divineconstruction.ltd"
+                  >www.divineconstruction.ltd</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 uppercase tracking-widest font-semibold"
+        >
+          <p>© 2025 Divine Construction. All Rights Reserved.</p>
+          <div class="mt-4 md:mt-0 flex space-x-6">
+            <a class="hover:text-primary" href="#">Privacy Policy</a>
+            <a class="hover:text-primary" href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // New Figma Hero Animation
+        gsap.from(".hero-left-content > *", {
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power2.out",
+          delay: 0.2,
+        });
+
+        gsap.from(".hero-right-content img", {
+          scale: 0.9,
+          opacity: 0,
+          duration: 1.2,
+          stagger: 0.3,
+          ease: "power3.out",
+          delay: 0.4,
+        });
+
+        gsap.from(".hero-right-content .rounded-full", {
+          scale: 0,
+          opacity: 0,
+          duration: 0.8,
+          ease: "back.out(1.5)",
+          delay: 1.2,
+        });
+
+        // About Section Animation
+        gsap.from("#about > div > div > div", {
+          scrollTrigger: {
+            trigger: "#about",
+            start: "top 80%",
+            toggleActions: "play reverse play reverse",
+          },
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power2.out",
+        });
+
+        // Services Cards Animation
+        gsap.from("#services .grid > div", {
+          scrollTrigger: {
+            trigger: "#services",
+            start: "top 80%",
+            toggleActions: "play reverse play reverse",
+          },
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power2.out",
+        });
+
+        // Stats Section Animation
+        gsap.from(".grid.grid-cols-2.md\\:grid-cols-4 > div", {
+          scrollTrigger: {
+            trigger: ".grid.grid-cols-2.md\\:grid-cols-4",
+            start: "top 85%",
+            toggleActions: "play reverse play reverse",
+          },
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+        });
+
+        // Projects Section Animation
+        gsap.utils.toArray("#projects .flex").forEach((project) => {
+          gsap.from(project, {
+            scrollTrigger: {
+              trigger: project,
+              start: "top 80%",
+              toggleActions: "play reverse play reverse",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out",
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
